@@ -180,7 +180,7 @@ class OperationView extends Backbone.View
 
   # Show response from server
   showResponse: (response) ->
-    prettyJson = JSON.stringify(response, null, "\t").replace(/\n/g, "<br>")
+    prettyJson = JSON.stringify(response || "", null, "\t").replace(/\n/g, "<br>")
     $(".response_body", $(@el)).html escape(prettyJson)
 
 

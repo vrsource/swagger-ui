@@ -1565,7 +1565,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
     OperationView.prototype.showResponse = function(response) {
       var prettyJson;
-      prettyJson = JSON.stringify(response, null, "\t").replace(/\n/g, "<br>");
+      prettyJson = JSON.stringify(response || "", null, "\t").replace(/\n/g, "<br>");
       return $(".response_body", $(this.el)).html(escape(prettyJson));
     };
 
