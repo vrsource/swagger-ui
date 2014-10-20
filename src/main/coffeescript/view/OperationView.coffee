@@ -125,8 +125,8 @@ class OperationView extends Backbone.View
       headerParams = null
       invocationUrl = 
         if @model.supportHeaderParams()
-          headerParams = @model.getHeaderParams(map)
-          @model.urlify(map, false)
+          headerParams = @model.getHeaderParams(map, false)
+          @model.urlify(map, true)
         else
           @model.urlify(map, true)
 
